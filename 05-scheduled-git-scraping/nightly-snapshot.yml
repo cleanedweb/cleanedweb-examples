@@ -1,0 +1,49 @@
+# Copy this file to .github/workflows/nightly-snapshot.yml in your own repository, and
+# summarize_diff.py to scripts/summarize_diff.py. See README.md for the one-time setup.
+name: Nightly DEV articles snapshot
+
+on:
+  schedule:
+    - cron: '23 4 * * *'        # every day at 04:23 UTC
+  workflow_dispatch:
+
+concurrency: nightly-snapshot    # never two snapshots at once
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write            # lets the job push the data file
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2         # the summary compares the new commit with the previous one
+
+      - name: Collect
+        id: collect
+        uses: cleanedweb/run-api-action@v1
+        with:
+          api-key: ${{ secrets.CLEANEDWEB_API_KEY }}
+          api-id: generated_b634ae9b1a8fb7e781d7c4cf   # DEV Community Articles
+          input: '{"t": "# mcp"}'                      # the feed for one tag, as the contract's examples show
+          max-items: 30                                # every record delivered is charged
+          version: 1
+          output-path: data/dev-mcp-articles.json
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.collect.outputs.output-path }}"
+          if git diff --staged --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update data: ${{ steps.collect.outputs.record-count }} records (run ${{ steps.collect.outputs.run-id }})"
+            git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: What changed
+        if: steps.commit.outputs.committed == 'true'
+        run: python3 scripts/summarize_diff.py "${{ steps.collect.outputs.output-path }}" >> "$GITHUB_STEP_SUMMARY"

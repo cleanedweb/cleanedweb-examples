@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt
+      - name: Per-example client copies match shared/cw_http.py
+        run: python scripts/sync_client.py --check
+      - name: Compile every script
+        run: python -m compileall -q shared scripts 0*-*
+      - name: Tests (offline, mocked HTTP)
+        run: |
+          for dir in shared 01-price-monitor 02-job-board-aggregator 03-used-car-deal-finder 04-github-topic-research 05-scheduled-git-scraping 06-mcp-agent; do
+            echo "== $dir"
+            (cd "$dir" && python -m unittest discover -p 'test_*.py')
+          done
+      - name: Offline demos run end to end
+        run: |
+          (cd 01-price-monitor && python price_monitor.py --from-file sample/day1.json --out /tmp/pm && python price_monitor.py --from-file sample/day2.json --out /tmp/pm)
+          (cd 02-job-board-aggregator && python job_aggregator.py --sample --out /tmp/jobs)
+          (cd 03-used-car-deal-finder && python deal_finder.py --sample --out /tmp/cars)
+          (cd 04-github-topic-research && python topic_research.py --sample --out /tmp/topic)
+      - name: No scraped data is committed
+        run: |
+          if git ls-files | grep -E '(^|/)(out|data)/'; then
+            echo "::error::Files under out/ or data/ must not be committed."; exit 1
+          fi

@@ -1,0 +1,10 @@
+# Scraped data and run state never get committed: examples write to out/
+out/
+data/
+.pending-*.json
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/

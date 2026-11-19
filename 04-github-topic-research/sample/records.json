@@ -1,0 +1,7 @@
+[
+  {"title": "scrapekit", "owner_login": "example-org", "url": "https://github.example/example-org/scrapekit", "description": "A | tricky <b>description</b>", "programming_language": "Python", "typed_stargazer_count": 1200, "typed_forks_count": 90, "topics": ["web-scraping", "python", "crawler"]},
+  {"title": "crawlr", "owner_login": "someone", "url": "https://github.example/someone/crawlr", "description": "Small crawler", "programming_language": "TypeScript", "stargazer_count": "1,200", "forks_count": "120", "topics": ["web-scraping", "typescript", "crawler"]},
+  {"title": "no-counts", "url": "https://github.example/x/no-counts", "description": "Not enriched", "topics": ["web-scraping"]},
+  {"title": "tiny", "owner_login": "a", "url": "https://github.example/a/tiny", "programming_language": "Python", "typed_stargazer_count": 3, "typed_forks_count": 0, "topics": ["python", "web-scraping"]},
+  {"title": "crawlr", "url": "https://github.example/someone/crawlr", "description": "duplicate url, dropped"}
+]

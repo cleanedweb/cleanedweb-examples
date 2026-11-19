@@ -1,0 +1,5 @@
+[
+  {"title": "Founding Engineer (Python)", "company_name": "Example Labs", "location": "San Francisco, CA", "type": "Full-time", "salary_range": "$150K - $200K", "created_at": "2 days", "url": "https://jobs.example/yc/1"},
+  {"title": "=HYPERLINK(\"https://evil.example\",\"click\")", "company_name": "Formula Inc", "location": "Remote", "type": "Full-time", "created_at": "5 days", "url": "https://jobs.example/yc/2"},
+  {"title": "Designer", "company_name": "Pixel Co", "location": "New York, NY", "type": "Contract", "created_at": "1 week", "url": "https://jobs.example/yc/3"}
+]

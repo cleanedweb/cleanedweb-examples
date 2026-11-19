@@ -1,0 +1,3 @@
+# Everything needed to run every example's tests (the 06 agent tests skip without claude-agent-sdk)
+httpx>=0.27
+claude-agent-sdk>=0.2

@@ -1,0 +1,4 @@
+[
+  {"title": "Python script to clean a CSV", "client_name": "Sam P.", "client_country": "United Kingdom", "price_type": "Fixed Price", "title_nano": "$120", "posted_time": "1 hour ago", "url": "https://jobs.example/pph/1", "description": "Small data cleaning job"},
+  {"title": "Designer", "client_name": "Pixel Co", "client_country": "United States", "price_type": "Hourly", "title_nano": "Hourly", "posted_time": "3 hours ago", "url": "https://jobs.example/yc/3"}
+]

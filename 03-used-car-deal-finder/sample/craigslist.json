@@ -1,0 +1,62 @@
+[
+  {
+    "title": "2012 Toyota Tacoma",
+    "vehicle_name": "2012  Toyota Tacoma",
+    "price": 9500,
+    "currency": "USD",
+    "vehicle_year": "2012",
+    "odometer": "120,000",
+    "fuel": "gas",
+    "transmission": "automatic",
+    "address_locality": "Oakland",
+    "url": "https://cars.example/cl/1"
+  },
+  {
+    "title": "2013 Toyota Tacoma",
+    "vehicle_name": "2013  Toyota Tacoma",
+    "price": 10200,
+    "currency": "USD",
+    "vehicle_year": "2013",
+    "odometer": "110,500",
+    "fuel": "gas",
+    "transmission": "automatic",
+    "address_locality": "Oakland",
+    "url": "https://cars.example/cl/2"
+  },
+  {
+    "title": "2012 Toyota Tacoma",
+    "vehicle_name": "2012  Toyota Tacoma",
+    "price": 9900,
+    "currency": "USD",
+    "vehicle_year": "2012",
+    "odometer": "130,000",
+    "fuel": "gas",
+    "transmission": "automatic",
+    "address_locality": "Oakland",
+    "url": "https://cars.example/cl/3"
+  },
+  {
+    "title": "2013 Toyota Tacoma",
+    "vehicle_name": "2013  Toyota Tacoma",
+    "price": 6400,
+    "currency": "USD",
+    "vehicle_year": "2013",
+    "odometer": "118,000",
+    "fuel": "gas",
+    "transmission": "automatic",
+    "address_locality": "Oakland",
+    "url": "https://cars.example/cl/4"
+  },
+  {
+    "title": "2010 Honda Civic",
+    "vehicle_name": "2010  Honda Civic",
+    "price": 5000,
+    "currency": "USD",
+    "vehicle_year": "2010",
+    "odometer": "150,000",
+    "fuel": "gas",
+    "transmission": "automatic",
+    "address_locality": "Oakland",
+    "url": "https://cars.example/cl/5"
+  }
+]

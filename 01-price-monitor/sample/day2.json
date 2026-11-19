@@ -1,0 +1,6 @@
+[
+  {"url": "https://shop.example/p/1", "brand": "Acme", "item_name": "Soprano Uke", "price": 49.0, "currency": "EUR"},
+  {"url": "https://shop.example/p/2", "brand": "Acme", "item_name": "Concert Uke", "price": 89.0, "currency": "EUR"},
+  {"url": "https://shop.example/p/3", "brand": "Acme", "item_name": "Tenor Uke", "price": "132,00", "currency": "EUR"},
+  {"url": "https://shop.example/p/5", "brand": "Acme", "item_name": "Baritone <@channel> Uke", "price": 150.0, "currency": "EUR"}
+]
