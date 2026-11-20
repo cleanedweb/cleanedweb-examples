@@ -15,7 +15,7 @@ This uses [`cleanedweb/run-api-action`](https://github.com/cleanedweb/run-api-ac
    - `summarize_diff.py` to `scripts/summarize_diff.py`
 4. **Run it once by hand**: Actions > *Nightly DEV articles snapshot* > *Run workflow*. It creates `data/dev-mcp-articles.json` and commits it. After the next scheduled run, the job summary lists new and changed records.
 
-Until the action repository is public, other private repositories can use it only if *Settings > Actions > General > Access* on the action repository allows it.
+The action gets its `v1` tag with its first release; until then change `@v1` to `@main` in the workflow.
 
 ## What the workflow does
 

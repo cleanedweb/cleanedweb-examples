@@ -2,8 +2,6 @@
 
 Small, runnable examples for [CleanedWeb](https://cleanedweb.com/?utm_source=github&utm_medium=cleanedweb-examples), which turns public website collections into maintained REST APIs that return structured records. 5,000 records are free once, then prepaid credit from $1 per 1,000; a run is charged per record delivered.
 
-> **Private preview.** This repository is private until it is reviewed. Delete this note before publishing.
-
 Each example is its own folder with a README and code, uses plain HTTP (Python `httpx` or the GitHub Action), and runs without a key in an offline or no-key mode first. The official `cleanedweb` SDKs for Python and JavaScript are coming; nothing here depends on them.
 
 | Example | What it does |
