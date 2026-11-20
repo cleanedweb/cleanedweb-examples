@@ -46,7 +46,7 @@ Alerts: set `ALERT_WEBHOOK_URL` (or `--webhook`) to post the report as `{"text":
 
 ## How it works
 
-1. `CleanedWeb().run(...)` sends `POST /v1/catalog/public/apis/{api_id}/endpoints/{endpoint_id}/run` to `https://broker.cleanedweb.com` with the required `Idempotency-Key`, follows a `202` by reading `/result` with the same key after `Retry-After`, and accepts the result only if `summary.status` is `completed` or `bounded` and `within_scope_passed` is true. See [run a catalog API](https://cleanedweb.com/docs/run-catalog-api/?utm_source=github&utm_medium=cleanedweb-examples).
+1. `CleanedWeb().run(...)` sends `POST /v1/catalog/public/apis/{api_id}/endpoints/{endpoint_id}/run` to `https://api.cleanedweb.com` with the required `Idempotency-Key`, follows a `202` by reading `/result` with the same key after `Retry-After`, and accepts the result only if `summary.status` is `completed` or `bounded` and `within_scope_passed` is true. See [run a catalog API](https://cleanedweb.com/docs/run-catalog-api/?utm_source=github&utm_medium=cleanedweb-examples).
 2. The idempotency key is written to `out/.pending-price-monitor.json` **before** the request and reused if you re-run after an interruption, so a lost response never starts and charges a second run.
 3. `normalize` keeps records with an id and a price. A missing price is skipped, never treated as 0.
 4. `diff_snapshots` compares with `out/prices.json`. Items absent from this run are reported as "not in this run", **not** as removed: a run bounded by `--max-items` sees only part of the source (see [storing results](https://cleanedweb.com/docs/storing-results/?utm_source=github&utm_medium=cleanedweb-examples)).

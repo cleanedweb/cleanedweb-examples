@@ -33,7 +33,7 @@ from typing import Any
 
 import httpx
 
-RUN_BASE = "https://broker.cleanedweb.com"
+RUN_BASE = "https://api.cleanedweb.com"
 CATALOG_BASE = "https://app.cleanedweb.com"
 SITE_BASE = "https://cleanedweb.com"
 

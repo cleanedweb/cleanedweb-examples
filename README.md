@@ -30,7 +30,7 @@ python price_monitor.py --from-file sample/day1.json     # no key: offline demo 
 ## How the examples call the API
 
 ```
-POST https://broker.cleanedweb.com/v1/catalog/public/apis/{api_id}/endpoints/{endpoint_id}/run
+POST https://api.cleanedweb.com/v1/catalog/public/apis/{api_id}/endpoints/{endpoint_id}/run
 Authorization: Bearer <API key with the run scope>
 Idempotency-Key: <saved before sending>
 {"input": {...}, "max_items": 25}

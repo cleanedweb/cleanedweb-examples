@@ -43,7 +43,7 @@ class RunTests(unittest.TestCase):
         result = cw.run("generated_x", input={"q": 1}, max_items=5)
         self.assertEqual(result.records, [{"a": 1}])
         call = cw.calls[0]
-        self.assertEqual(call["url"], "https://broker.cleanedweb.com/v1/catalog/public/apis/generated_x/endpoints/generated_x_search/run")
+        self.assertEqual(call["url"], "https://api.cleanedweb.com/v1/catalog/public/apis/generated_x/endpoints/generated_x_search/run")
         self.assertEqual(call["headers"]["authorization"], "Bearer sk-secret")
         self.assertRegex(call["headers"]["idempotency-key"], r"^example-")
         self.assertEqual(call["body"], {"input": {"q": 1}, "max_items": 5, "timeout_seconds": 1800, "wait_seconds": 90})
