@@ -2,7 +2,7 @@
 
 Small, runnable examples for [CleanedWeb](https://cleanedweb.com/?utm_source=github&utm_medium=cleanedweb-examples), which turns public website collections into maintained REST APIs that return structured records. 5,000 records are free once, then prepaid credit from $1 per 1,000; a run is charged per record delivered.
 
-Each example is its own folder with a README and code, uses plain HTTP (Python `httpx` or the GitHub Action), and runs without a key in an offline or no-key mode first. The official `cleanedweb` SDKs for Python and JavaScript are coming; nothing here depends on them.
+Each example is its own folder with a README and code, uses plain HTTP (Python `httpx` or the GitHub Action), and runs without a key in an offline or no-key mode first. Nothing here depends on an SDK; for your own code there are official clients for [Python](https://github.com/cleanedweb/cleanedweb-python) (`pip install cleanedweb`), [JavaScript/TypeScript](https://github.com/cleanedweb/cleanedweb-js) (`npm install cleanedweb`) and [Go](https://github.com/cleanedweb/cleanedweb-go).
 
 | Example | What it does |
 | --- | --- |
