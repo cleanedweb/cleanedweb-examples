@@ -1,4 +1,8 @@
+<p align="center"><img src="https://cleanedweb.com/assets/logo.png" width="72" alt="CleanedWeb"></p>
+
 # CleanedWeb examples
+
+[![CI](https://github.com/cleanedweb/cleanedweb-examples/actions/workflows/ci.yml/badge.svg)](https://github.com/cleanedweb/cleanedweb-examples/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/cleanedweb/cleanedweb-examples/blob/main/LICENSE)
 
 Small, runnable examples for [CleanedWeb](https://cleanedweb.com/?utm_source=github&utm_medium=cleanedweb-examples), which turns public website collections into maintained REST APIs that return structured records. 5,000 records are free once, then prepaid credit from $1 per 1,000; a run is charged per record delivered.
 
