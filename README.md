@@ -4,7 +4,11 @@
 
 [![CI](https://github.com/cleanedweb/cleanedweb-examples/actions/workflows/ci.yml/badge.svg)](https://github.com/cleanedweb/cleanedweb-examples/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/cleanedweb/cleanedweb-examples/blob/main/LICENSE)
 
-Small, runnable examples for [CleanedWeb](https://cleanedweb.com/?utm_source=github&utm_medium=cleanedweb-examples), which turns public website collections into maintained REST APIs that return structured records. 5,000 records are free once, then prepaid credit from $1 per 1,000; a run is charged per record delivered.
+**Scrapers break whenever a site changes its pages.** CleanedWeb is a catalog of maintained REST APIs
+for public websites (listings, products, jobs, articles, profiles): you call an API and get structured
+records with known fields. When a site changes, CleanedWeb rebuilds its API.
+
+Small, runnable examples for [CleanedWeb](https://cleanedweb.com/?utm_source=github&utm_medium=cleanedweb-examples). 5,000 records are free once, then prepaid credit from $1 per 1,000; a run is charged per record delivered.
 
 Each example is its own folder with a README and code, uses plain HTTP (Python `httpx` or the GitHub Action), and runs without a key in an offline or no-key mode first. Nothing here depends on an SDK; for your own code there are official clients for [Python](https://github.com/cleanedweb/cleanedweb-python) (`pip install cleanedweb`), [JavaScript/TypeScript](https://github.com/cleanedweb/cleanedweb-js) (`npm install cleanedweb`) and [Go](https://github.com/cleanedweb/cleanedweb-go).
 
